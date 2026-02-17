@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="600" height="400">
+  <rect width="120" height="80" rx="8" fill="#f5f7fb" />
+  <g transform="translate(8,8)">
+    <rect x="0" y="6" width="104" height="46" rx="4" fill="#ffffff" stroke="#d9e7ff" />
+    <rect x="6" y="12" width="92" height="30" rx="2" fill="#eef6ff" />
+    <rect x="34" y="44" width="36" height="6" rx="2" fill="#d9e7ff" />
+    <rect x="44" y="50" width="16" height="2" rx="1" fill="#cfe0ff" />
+    <rect x="0" y="56" width="104" height="6" rx="3" fill="#eef6ff" />
+    <g transform="translate(10,16)">
+      <rect x="0" y="0" width="70" height="18" rx="1.5" fill="#ffffff" />
+      <rect x="6" y="3" width="58" height="12" rx="1" fill="#f7fbff" />
+    </g>
+    <circle cx="86" cy="28" r="2.6" fill="#ffd166" />
+    <circle cx="92" cy="28" r="2.6" fill="#06d6a0" />
+  </g>
+  <text x="50%" y="76" font-family="Arial, Helvetica, sans-serif" font-size="6" fill="#7b8aa6" text-anchor="middle">Electronics — Laptop</text>
+</svg>
