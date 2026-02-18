@@ -1,5 +1,5 @@
-import { createContext, useState, useEffect } from 'react';
-import { authAPI } from '../utils/api';
+import { createContext, useState, useEffect } from "react";
+import { authAPI } from "../utils/api";
 
 export const AuthContext = createContext();
 
@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
       loadUser();
     } else {
@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
       const { data } = await authAPI.getProfile();
       setUser(data.user);
     } catch (error) {
-      localStorage.removeItem('token');
+      localStorage.removeItem("token");
     } finally {
       setLoading(false);
     }
@@ -29,25 +29,28 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (credentials) => {
     const { data } = await authAPI.login(credentials);
-    localStorage.setItem('token', data.token);
+    localStorage.setItem("token", data.token);
     setUser(data.user);
     return data;
   };
 
   const register = async (userData) => {
     const { data } = await authAPI.register(userData);
-    localStorage.setItem('token', data.token);
+    console.log("Registration successful:", data);
+    localStorage.setItem("token", data.token);
     setUser(data.user);
     return data;
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, setUser, loading, login, register, logout, loadUser }}>
+    <AuthContext.Provider
+      value={{ user, setUser, loading, login, register, logout, loadUser }}
+    >
       {children}
     </AuthContext.Provider>
   );
