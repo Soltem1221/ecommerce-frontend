@@ -26,11 +26,4 @@ build/
 Thumbs.db
 
 # Uploads
-uploads/
-*.jpg
-*.jpeg
-*.png
-*.gif
 
-# Database
-*.sql.backup
